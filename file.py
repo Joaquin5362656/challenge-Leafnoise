@@ -20,6 +20,8 @@ def check_parentheses(str):
     cuantos parentesis estan desbalanceados y retorna False. Si los parentesis estan balanceados, retorna True.
     """
     balance = 0 
+    if str.startswith(')') or str.endswith('('):
+        return False
     for character in str:
         if character == '(':
             balance += 1
